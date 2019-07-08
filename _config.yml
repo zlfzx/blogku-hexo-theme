@@ -1,0 +1,57 @@
+# Header
+menu:
+  Home: 
+    url: /
+    icon: home
+  About:
+    url: /about
+    icon: user
+  Archives: 
+    url: /archives
+    icon: archive
+  Tags: 
+    url: /tags
+    icon: tags
+  Categories: 
+    url: /categories
+    icon: thumb-tack
+  Github:
+    url: https://github.com/zulfizz
+    icon: github
+
+# Author
+author:
+  name: Author
+  bio: Lorem ipsum dolor sit amet.
+  image: /img/user.jpg # path image
+
+# Default post title
+default_post_title: Untitled
+
+# Comments. Choose one by filling up the information
+comments:
+  # Disqus comments
+  disqus_shortname: zulfizz
+  # Facebook comments
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
+
+# Google Analytics Tracking ID
+google_analytics: 
+
+# Addthis ID
+addthis:
+
+# set your own favicon
+favicon:
+
+# Social Accounts
+twitter_url:
+twitter_handle:
+facebook_url: https://www.facebook.com/zulfi.izzulhaq
+github_url: https://github.com/zulfizz
+gitlab_url: https://gitlab.com/zulfizz
+linkedin_url:
+mailto: zulfi.izzulhaq@gmail.com

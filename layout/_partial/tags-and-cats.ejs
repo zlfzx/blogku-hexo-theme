@@ -1,0 +1,29 @@
+    <!-- Tags and categories -->
+    <% if (item.categories && item.categories.length || item.tags && item.tags.length) { %>
+    <div class="d-flex justify-content-between">
+        <div class="d-flex flex-wrap align-items-center">
+            <% if (item.tags && item.tags.length){ %>
+                <%
+                    var tags = [];
+                    item.tags.forEach(function(tag){
+                        tags.push('<a class="badge badge-danger m-1" href="' + config.root + tag.path + '"><i class="fa fa-tag"></i> ' + tag.name + '</a>');
+                    });
+                %>
+                <%- tags.join(' ') %>
+            <% } else { %>
+                <%- partial('article-categories', {item: item}) %>
+            <% } %>
+        </div>
+        <div class="d-flex flex-wrap align-items-center">
+            <% if (item.tags && item.tags.length && item.categories && item.categories.length){ %>
+                <%
+                    var categories = [];
+                    item.categories.forEach(function(category){
+                        categories.push('<a class="badge badge-primary m-1" href="' + config.root + category.path + '"><i class="fa fa-thumb-tack"></i> ' + category.name + '</a>');
+                    });
+                %>
+                <%- categories.join('/ ') %>
+            <% } %>
+        </div>
+    </div>
+    <% } %>

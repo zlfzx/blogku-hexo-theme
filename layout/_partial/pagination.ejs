@@ -1,0 +1,8 @@
+  	<nav aria-label="Page navigation">
+        <% if (page.prev){ %>
+        <a class="btn btn-sm btn-outline-info float-left" href="<%- config.root %><%- page.prev_link %>" tabindex="-1"><i class="fa fa-arrow-left"></i> Previous</a>
+        <% } %>
+    	<% if (page.next){ %>
+        <a class="btn btn-sm btn-outline-info float-right" href="<%- config.root %><%- page.next_link %>">Next <i class="fa fa-arrow-right"></i></a>
+        <% } %>
+    </nav>

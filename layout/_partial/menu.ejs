@@ -1,0 +1,32 @@
+    <div class="container">
+        <header class="py-3 bg-secondary">
+          <div class="row flex-nowrap justify-content-between align-item-center">
+            <div class="col-12 text-center">
+              <h3><a class="text-light" href="<%- config.root %>"><%- config.title || "Title" %></a></h3>
+              <h6 class="text-center text-light font-italic"><%- config.subtitle %></h6>
+            </div>
+          </div>
+        </header>
+        <div class="py-1 bg-info">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-info p-0 px-3">
+            <button type="button" class="navbar-toggler bg-secondary" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <% for (var i in theme.menu){ %>
+                <li class="nav-item">
+                  <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>" class="nav-link text-light">
+                    <% if (theme.menu[i].icon) { %>
+                    <i class="fa fa-<%= theme.menu[i].icon %>"></i> <%= i %>
+                    <% } else { %>
+                    <%= i %>
+                    <% } %>
+                  </a>
+                </li>
+                <% } %>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>

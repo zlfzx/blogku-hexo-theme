@@ -1,0 +1,15 @@
+<!-- Post Content -->
+<div class="pb-1 mb-3 border-bottom">
+    <h2><%- item.title || theme.default_post_title || "Untitled" %></h2>
+    <h5><span class="badge badge-warning"><i class="fa fa-clock-o"></i>
+        <% if(item.author) { %>
+            Posted by <%- item.author %> on
+        <% } %>
+        <% if(item.date) { %>
+            <%= item.date.format(config.date_format) %>
+        <% } %>
+    </span></h5>
+    <%- partial("_partial/tags-and-cats.ejs") %>
+</div>
+
+<%- partial("_partial/article-content.ejs") %>

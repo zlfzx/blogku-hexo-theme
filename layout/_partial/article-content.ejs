@@ -1,0 +1,18 @@
+<div class="pb-1 mb-3">
+  <%- item.content %>
+
+  <% if(theme.addthis) { %>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis %>"></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
+  <% } %>
+</div>
+
+<!-- Comments -->
+<% if (item.comment != false) { %>
+    <div class="pb-1 mb-3">
+        <%- partial("_partial/comments.ejs") %>
+    </div>
+<% } %>
